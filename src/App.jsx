@@ -19,9 +19,6 @@ function App() {
           </mesh>
         </RigidBody>
       </Physics>
-      <group position={[0, 3, 0]}>
-        <CarModel />
-      </group>
     </>
   );
 }

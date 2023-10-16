@@ -3,8 +3,9 @@ import { RigidBody } from '@react-three/rapier';
 import { useRef } from 'react';
 import { useMovement } from '../hooks/useMovement';
 import { useFrame } from '@react-three/fiber';
+import { CarModel } from '../models/CarModel';
 
-const MOVE_SPEED = 5;
+const MOVE_SPEED = 15;
 const direction = new THREE.Vector3();
 const frontVector = new THREE.Vector3();
 const sideVector = new THREE.Vector3();
@@ -27,7 +28,7 @@ function Car() {
   return (
     <RigidBody position={[0, 1, -2]} ref={carRef} >
       <mesh>
-        <capsuleGeometry arg={[0.5, 0.5]} />
+        <CarModel />
       </mesh>
     </RigidBody>
   );
